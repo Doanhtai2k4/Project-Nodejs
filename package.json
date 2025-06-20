@@ -14,12 +14,15 @@
     "nodejs"
   ],
   "author": {
-    "name" : "Đỗ Anh Tài",
+    "name": "Đỗ Anh Tài",
     "url": "https://www.facebook.com/angonzimoto12345"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Doanhtai2k4/Project-Nodejs/issues"
   },
-  "homepage": "https://github.com/Doanhtai2k4/Project-Nodejs#readme"
+  "homepage": "https://github.com/Doanhtai2k4/Project-Nodejs#readme",
+  "dependencies": {
+    "express": "5.1.0"
+  }
 }
