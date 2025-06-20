@@ -1,0 +1,25 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "nodejs pro TaiDo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doanhtai2k4/Project-Nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": {
+    "name" : "Đỗ Anh Tài",
+    "url": "https://www.facebook.com/angonzimoto12345"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doanhtai2k4/Project-Nodejs/issues"
+  },
+  "homepage": "https://github.com/Doanhtai2k4/Project-Nodejs#readme"
+}
