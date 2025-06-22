@@ -6,10 +6,10 @@
 // const express = require("express");
 
 import express from "express"
-
+import 'dotenv/config'
 // tạo ra 1 đối tượng
 const app = express();
-const  PORT = 8080;
+const  PORT = process.env.PORT || 8080;
 
 /**
  * 1 trang web nhiều đường link url
@@ -29,5 +29,6 @@ app.get("/anhtai",(req,res) => {
  * cần nói cho ứng dụng biết  địa chỉ
  */
 app.listen(PORT, () => {
-    console.log(`My app is running on port: ${PORT}`)
+    console.log(`My app is running on port: ${PORT}`);
+    console.log("env port : ", process.env.PORT)
 })

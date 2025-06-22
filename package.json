@@ -31,7 +31,8 @@
   },
   "homepage": "https://github.com/Doanhtai2k4/Project-Nodejs#readme",
   "dependencies": {
-    "express": "5.1.0"
+    "express": "5.1.0",
+    "dotenv": "16.4.7"
   },
   "devDependencies": {
     "@types/express": "5.0.0",
