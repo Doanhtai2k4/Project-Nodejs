@@ -1,10 +1,12 @@
 {
+  // cấu hình cho phần typescript
 "compilerOptions": {
-"module": "commonjs",
+"module": "commonjs",   // dịch code từ typescript sang version nào của js , khi dùng commonjs thì sử dụng cú pháp required
 "esModuleInterop": true,
-"target": "es6",
-"sourceMap": true,
+"target": "es6",      // biet duoc version js
+"sourceMap": true,    // sợi dây kết nối js và ts
 "skipLibCheck": true,
-"outDir": "dist"
+"outDir": "dist",        // đầu ra lưu ntn
+"rootDir": "src"      // chỉ biên dich npx tsc bên trong src
 }
 }
