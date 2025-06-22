@@ -3,7 +3,10 @@
  * ưu tiên sử dụng const
  * gọi đến thư viện express bằng require
  */
-const express = require("express");
+// const express = require("express");
+
+import express from "express"
+
 // tạo ra 1 đối tượng
 const app = express();
 const  PORT = 8080;
