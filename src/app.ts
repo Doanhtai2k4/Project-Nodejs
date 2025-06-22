@@ -18,7 +18,7 @@ const  PORT = 8080;
  */
 app.get("/",(req,res) => {
 
-    res.send("Hello world update!") 
+    res.send("Hello world nodemon!") 
 })
 app.get("/anhtai",(req,res) => {
 
