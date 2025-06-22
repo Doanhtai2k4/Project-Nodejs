@@ -9,9 +9,13 @@
     "dev": "nodemon"
   },
   "nodemonConfig": {
-    "watch": ["src"],
+    "watch": [
+      "src"
+    ],
     "ext": "ts",
-    "ignore": ["node_modules"],     
+    "ignore": [
+      "node_modules"
+    ],
     "exec": "ts-node ./src/app.ts"
   },
   "repository": {
@@ -31,10 +35,12 @@
   },
   "homepage": "https://github.com/Doanhtai2k4/Project-Nodejs#readme",
   "dependencies": {
-    "express": "5.1.0",
-    "dotenv": "16.4.7"
+    "dotenv": "16.4.7",
+    "ejs": "3.1.10",
+    "express": "5.1.0"
   },
   "devDependencies": {
+    "@types/ejs": "3.1.5",
     "@types/express": "5.0.0",
     "@types/node": "22.10.7",
     "nodemon": "3.1.9",

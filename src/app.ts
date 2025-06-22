@@ -11,6 +11,9 @@ import 'dotenv/config'
 const app = express();
 const  PORT = process.env.PORT || 8080;
 
+//config view engine
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện đối tại vị trí file hiện tại
 /**
  * 1 trang web nhiều đường link url
  * sử dụng arrow function ( hàm mũi tên)
@@ -18,7 +21,7 @@ const  PORT = process.env.PORT || 8080;
  */
 app.get("/",(req,res) => {
 
-    res.send("Hello world nodemon!") 
+    res.render("home.ejs")
 })
 app.get("/anhtai",(req,res) => {
 
@@ -30,5 +33,5 @@ app.get("/anhtai",(req,res) => {
  */
 app.listen(PORT, () => {
     console.log(`My app is running on port: ${PORT}`);
-    console.log("env port : ", process.env.PORT)
+    console.log(__dirname + '/views')
 })
