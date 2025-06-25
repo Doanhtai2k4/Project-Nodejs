@@ -15,6 +15,10 @@ const  PORT = process.env.PORT || 8080;
 //config view engine
 app.set('view engine', 'ejs')  //tien tố đuôi ejs
 app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện đối tại vị trí file hiện tại
+
+//config req.body
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 /**
  * 1 trang web nhiều đường link url
  * sử dụng arrow function ( hàm mũi tên)
@@ -29,15 +33,17 @@ app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện 
 //     res.send("Hello Tai") 
 // })
 
-//config routter
-webRoutes(app);
+
+
 
 app.use(express.static("public"));      // nói với express là cho phep truy cap toi thu muc public trang thai tĩnh
 /** 
  * trên máy tính chúng ta có nhiều tiến trình ( nhiều 0 gian  )
  * cần nói cho ứng dụng biết  địa chỉ
  */
+//config routter
+webRoutes(app);
 app.listen(PORT, () => {
     console.log(`My app is running on port: ${PORT}`);
-    console.log(__dirname + '/views')
+  
 })
