@@ -13,7 +13,7 @@ const app = express();
 const  PORT = process.env.PORT || 8080;
 
 //config view engine
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs')  //tien tố đuôi ejs
 app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện đối tại vị trí file hiện tại
 /**
  * 1 trang web nhiều đường link url
