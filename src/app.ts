@@ -32,6 +32,7 @@ app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện 
 //config routter
 webRoutes(app);
 
+app.use(express.static("public"));      // nói với express là cho phep truy cap toi thu muc public trang thai tĩnh
 /** 
  * trên máy tính chúng ta có nhiều tiến trình ( nhiều 0 gian  )
  * cần nói cho ứng dụng biết  địa chỉ
