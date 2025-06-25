@@ -5,8 +5,9 @@
  */
 // const express = require("express");
 
-import express from "express"
-import 'dotenv/config'
+import express from "express";
+import 'dotenv/config';
+import webRoutes from "./routes/web";
 // tạo ra 1 đối tượng
 const app = express();
 const  PORT = process.env.PORT || 8080;
@@ -19,14 +20,18 @@ app.set('views', __dirname + '/views')  //__dirname là đường dẫn tuyện 
  * sử dụng arrow function ( hàm mũi tên)
  * cần phải có req(tức là require) , và res(tức là responsive)
  */
-app.get("/",(req,res) => {
+// app.get("/",(req,res) => {
 
-    res.render("home.ejs")
-})
-app.get("/anhtai",(req,res) => {
+//     res.render("home.ejs")
+// })
+// app.get("/anhtai",(req,res) => {
 
-    res.send("Hello Tai") 
-})
+//     res.send("Hello Tai") 
+// })
+
+//config routter
+webRoutes(app);
+
 /** 
  * trên máy tính chúng ta có nhiều tiến trình ( nhiều 0 gian  )
  * cần nói cho ứng dụng biết  địa chỉ
