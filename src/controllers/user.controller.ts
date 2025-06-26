@@ -5,11 +5,11 @@ import { name } from "ejs";
 
 const getHomePage = async (req: Request,res: Response) => {
     // get users
-    const users = await getAllUsers();
-    console.log("Check user : ", users);
+    const users =  await getAllUsers();
+  
     // x -< y 
     return res.render("home.ejs", {
-        name: users
+        users: users
     });
 }
 const getCreateUserPage = (req: Request,res: Response) => {
