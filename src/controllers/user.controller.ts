@@ -15,7 +15,7 @@ const getHomePage = async (req: Request,res: Response) => {
 const getCreateUserPage = (req: Request,res: Response) => {
     return res.render("create-user")
 }
-const postCreateUser = (req: Request,res: Response) => {
+const postCreateUser = async (req: Request,res: Response) => {
     // console.log(">>> check data:",req.body)
 
     const {fullname,email,address} = req.body;
@@ -23,7 +23,7 @@ const postCreateUser = (req: Request,res: Response) => {
     // console.log("check email: ",email);
 
         // handle create user
-    handleCreateUser(fullname,email,address);
+    await handleCreateUser(fullname,email,address);
 
 
     return res.redirect("/");
