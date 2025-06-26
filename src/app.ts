@@ -8,7 +8,7 @@
 import express from "express";
 import 'dotenv/config';
 import webRoutes from "./routes/web";
-import getConnection from "./config/database";
+// import getConnection from "./config/database";
 // tạo ra 1 đối tượng
 const app = express();
 const  PORT = process.env.PORT || 8080;
@@ -42,7 +42,7 @@ app.use(express.static("public"));      // nói với express là cho phep truy 
 //config routter
 webRoutes(app);
 
-getConnection();
+// getConnection();
 
 app.listen(PORT, () => {
     console.log(`My app is running on port: ${PORT}`);
