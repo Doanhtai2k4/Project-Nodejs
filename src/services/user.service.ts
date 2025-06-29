@@ -21,7 +21,20 @@ const handleCreateUser = async (
         // return result
         console.log(">>> insert a new user")
 }
+const handleDeleteUser = async (id: string) => {
+    const connection = getConnection();
+    try {
+  const sql = 'DELETE FROM `users` WHERE `id` = ? ';
+  const values = [id];
 
+  const [result, fields] = await (await connection).query(sql,values);
+
+  return result
+} catch (err) {
+  console.log(err);
+  return []
+}
+}
 const getAllUsers = async () => {
     const connection = getConnection();
     // A simple SELECT query
@@ -37,4 +50,4 @@ const getAllUsers = async () => {
     }
    
 }
-export {handleCreateUser,getAllUsers}
+export {handleCreateUser,getAllUsers,handleDeleteUser}
