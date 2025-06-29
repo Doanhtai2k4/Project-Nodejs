@@ -50,4 +50,19 @@ const getAllUsers = async () => {
     }
    
 }
-export {handleCreateUser,getAllUsers,handleDeleteUser}
+const getUserById = async (id: string) => {
+    const connection = getConnection();
+    try {
+  const sql = 'SELECT * FROM `users` WHERE `id` = ? ';
+  const values = [id];
+
+  const [result, fields] = await (await connection).query(sql,values);
+
+  return result[0];
+} catch (err) {
+  console.log(err);
+  return []
+}
+   
+}
+export {handleCreateUser,getAllUsers,handleDeleteUser,getUserById}
