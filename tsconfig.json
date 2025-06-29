@@ -7,6 +7,15 @@
 "sourceMap": true,    // sợi dây kết nối js và ts
 "skipLibCheck": true,
 "outDir": "dist",        // đầu ra lưu ntn
-"rootDir": "src"      // chỉ biên dich npx tsc bên trong src
+"rootDir": "src",      // chỉ biên dich npx tsc bên trong src
+"baseUrl": ".",       // quan ly toan bo du an
+"paths": {
+      "config/*": ["./src//config/*"],
+      "controllers/*": ["./src//controllers/*"],
+      "models/*": ["./src//models/*"],
+      "routes/*": ["./src//routes/*"],
+      "services/*": ["./src//services/*"],
+
+    }
 }
 }
