@@ -30,7 +30,7 @@ const postCreateUser = async (req: Request,res: Response) => {
 const postDeleteUser = async (req: Request,res: Response) => {
   
     const {id}= req.params ;
-    await handleDeleteUser(id);
+   const a = await handleDeleteUser(id);
     return res.redirect("/");
 }
 const getViewUser = async (req: Request,res: Response) => {
