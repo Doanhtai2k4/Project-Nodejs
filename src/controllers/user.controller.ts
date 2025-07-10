@@ -23,7 +23,7 @@ const postCreateUser = async (req: Request,res: Response) => {
     // console.log("check email: ",email);
 
         // handle create user
-    await handleCreateUser(fullname,email,address);
+    const a =await handleCreateUser(fullname,email,address);
 
     return res.redirect("/");
 }
